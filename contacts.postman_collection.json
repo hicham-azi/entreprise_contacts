@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "05ac37b2-d98a-4375-a842-4b53ab7a7d16",
+		"name": "contacts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/contacts/get?page=0&size=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"get"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get entreprises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/entreprise/get?page=0&size=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entreprise",
+						"get"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get entreprise by tva",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/entreprise/findByTva?tvaEntreprise=4444",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entreprise",
+						"findByTva"
+					],
+					"query": [
+						{
+							"key": "tvaEntreprise",
+							"value": "4444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"TEST3\",\r\n    \"lastName\":\"TEST3\",\r\n    \"address\":\"TEST3\",\r\n    \"tvaContact\":\"333\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/contacts/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add contact entreprise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/entreprise/addContact?entrepriseId=2&contactId=1&contactType=EMPLOYE",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entreprise",
+						"addContact"
+					],
+					"query": [
+						{
+							"key": "entrepriseId",
+							"value": "2"
+						},
+						{
+							"key": "contactId",
+							"value": "1"
+						},
+						{
+							"key": "contactType",
+							"value": "EMPLOYE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add entreprise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"address\":\"Bruxelles\",\r\n    \"tvaEntreprise\":\"4444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/entreprise/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entreprise",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"id\":\"1\",\r\n    \"firstName\":\"TEST2\",\r\n    \"lastName\":\"TEST2\",\r\n    \"address\":\"TEST2\",\r\n    \"tvaContact\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/contacts/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit entreprise",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"id\":1,\r\n     \"address\":\"Kherrata\",\r\n    \"tvaEntreprise\":\"33443333\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/entreprise/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entreprise",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/contacts/delete?contactId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "contactId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
